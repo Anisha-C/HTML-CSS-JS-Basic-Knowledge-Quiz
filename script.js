@@ -82,9 +82,10 @@ var answerD = document.getElementById("D")
 var correctAnswer = document.getElementById("answer")
 
 var score = document.getElementById("totalScore")
+var initials = document.getElementById("submitInitials")
 
 var timeLeft = 60
-
+var Timer;
 var timeEl = document.getElementById("Time")
 
 timeEl.textContent = timeLeft + " seconds"
@@ -102,16 +103,17 @@ function startQuiz() {
 
 function startTimer() {
 
-    var Timer = setInterval(function () {
+    Timer = setInterval(function () {
         if (timeLeft <= 0) {
             clearInterval(Timer)
+            endQuiz()
         }
         else {
             timeLeft--
             timeEl.textContent = timeLeft + " seconds"
         }
-
     }, 1000)
+
 }
 
 function displayQuestions() {
@@ -123,7 +125,11 @@ function displayQuestions() {
         answerC.textContent = questions[currentQuestionIndex].choices[2]
         answerD.textContent = questions[currentQuestionIndex].choices[3]
     }
-    else { endQuiz() }
+    else {
+        clearInterval(Timer)
+        timeEl.textContent = timeLeft + " seconds"
+        endQuiz()
+    }
 
 }
 
@@ -170,9 +176,22 @@ for (let i = 0; i < answer.length; i++) {
 }
 
 function endQuiz() {
-    questionsEl.style.display = "hide"
+    questionsEl.style.display = "none"
     quizOverEl.style.display = "block"
     totalScore.textContent = `Your final score is ${timeLeft}`
 }
 
+function saveHS() {
+    var initial = document.getElementById("initials").value
+    if (initial != "") {
+        var storeScores = JSON.parse(localStorage.getItem("highscores")) || []
+        var currentScore = { name: initial, score: timeLeft }
+        storeScores.push(currentScore)
+        localStorage.setItem("highscores", JSON.stringify(storeScores))
+        window.location.replace("highscores.html")
+    }
+
+}
+
 startEl.addEventListener("click", startQuiz);
+initials.addEventListener("click", saveHS)

@@ -1,53 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>HTML, CSS, JS Basic Knowledge Quiz</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
     <header>
         <h1>HTML, CSS, JS Basic Knowledge Quiz</h1>
-       <p id="Time"></p>
+        <p id="Time"></p>
+        <a href = "highscores.html">Highscores</a>
     </header>
 
     <main>
 
-<div class="show" id="startScreen">
-    <p>Welcome to Quiz</p>
-    <button id="Start">Start Quiz</button>
-</div>
-
-<div class="hide" id="Questions">
-    <p>Question</p>
-    <p id="questionText"></p>
-  
-    <div>Answers
-        <div>
-            <p><button id="A" class="btn">A</button></p>
-            <p><button id="B" class="btn">B</button></p>
-            <p><button id="C" class="btn">C</button></p>
-            <p><button id="D" class="btn">D</button></p>
-            <br>
-            <p id="answer" style="display:none;"></p>
+        <div class="show" id="startScreen">
+            <p>Welcome to Quiz</p>
+            <button id="Start">Start Quiz</button>
         </div>
-    </div>
-</div>
 
-<div class="hide" id="quizOver">
-    <p>Quiz over</p>
-    <p id = "totalScore"></p>
-    <p>Enter initials</p>
-    <input type="text">
-</div>
+        <div class="hide" id="Questions">
+            <p>Question</p>
+            <p id="questionText"></p>
+
+            <div>Answers
+                <div>
+                    <p><button id="A" class="btn">A</button></p>
+                    <p><button id="B" class="btn">B</button></p>
+                    <p><button id="C" class="btn">C</button></p>
+                    <p><button id="D" class="btn">D</button></p>
+                    <br>
+                    <p id="answer" style="display:none;"></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="hide" id="quizOver">
+            <p>Quiz over</p>
+            <p id="totalScore"></p>
+            <p>Enter initials</p>
+            <input id="initials" type="text">
+            <button id="submitInitials">Submit</button>
+        </div>
 
     </main>
-    
+
 </body>
 
 <script src="script.js"></script>
-</html>
 
+</html>
