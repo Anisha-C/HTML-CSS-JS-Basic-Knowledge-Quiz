@@ -2,14 +2,14 @@ const questions = [
 
     {
         question: "What does HTML stand for?",
-        choices: ["a. gold", "b. Hypertrophic Management Language", "c. gallium", "d. Helium"],
-        answer: "c. gallium"
+        choices: ["a. Home Tool Markup Language", "b. Hypertrophic Management Language", "c. Hyper Text Markup Language", "d. Hyperlinks and Text Markup Language"],
+        answer: "c. Hyper Text Markup Language"
     },
 
     {
-        question: "What is the difference between a <[p]> and a <[br]>?",
-        choices: ["a. gold", "b. gallium", "c. gadolinium", "d. germanium"],
-        answer: "c. gallium"
+        question: "< br  / > What type of tag is this?",
+        choices: ["a. Break tag", "b. Broken tag", "c. Opening tag", "d. germanium"],
+        answer: "a. Break"
     },
     {
         question: "The CSS property used to specify the transparency of an element is ?",
@@ -37,13 +37,13 @@ const questions = [
 
     {
         question: "Inside the HTML document, where do you place your JavaScript code?",
-        choices: ["a. Pm", "b. K", "c. P", "d. Po"],
-        answer: "d. K"
+        choices: ["a. Between body and html closing tags", "b. Inside the body tag", "c. All the way at the bottom", "d. In the header"],
+        answer: "a. Between body and html closing tags"
     },
     {
         question: "In Javascript, Which of the following type of variable takes precedence over other if names are same?",
         choices: ["a. global variable", "b. local variable", "c. All of the above", "d. Neither"],
-        answer: "c. gallium"
+        answer: "a. global variable"
     },
     {
         question: "In Javascript, Which of the following function of String object executes the search for a match between a regular expression and a specified string?",
